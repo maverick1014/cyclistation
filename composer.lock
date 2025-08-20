@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies"
     ],
-    "content-hash": "9ac02c0a0aac2cba78c6a2c4b2e3c4f4",
+    "content-hash": "c7b3b7e8e6b8e8e8e8e8e8e8e8e8e8e8",
     "packages": [],
     "packages-dev": [],
     "aliases": [],
@@ -15,5 +15,5 @@
         "php": "^8.1"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.6.0"
 }

@@ -62,6 +62,10 @@ function page_url($page = '') {
     return BASE_PATH . ltrim($page, '/');
 }
 
+function component_path($component) {
+    return __DIR__ . '/components/' . $component;
+}
+
 // SEO Configuration
 define('DEFAULT_META_DESCRIPTION', 'Discover premium Elves carbon bike framesets at Cyclistation. From aero gravel to XC hardtails, find your perfect high-performance frameset with global warranty and expert support.');
 define('DEFAULT_META_KEYWORDS', 'elves bikes, carbon framesets, gravel bike, road bike, triathlon bike, mountain bike, cyclistation, premium cycling');

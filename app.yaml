@@ -1,15 +1,20 @@
 # Digital Ocean App Platform Configuration
 name: cyclistation
 services:
-- environment_slug: php
+- name: web
+  environment_slug: php
   github:
     branch: main
     deploy_on_push: true
   http_port: 8080
   instance_count: 1
   instance_size_slug: basic-xxs
-  name: web
   routes:
   - path: /
   run_command: heroku-php-apache2
   source_dir: /
+  # Disable static site detection since this is a PHP app
+  build_command: echo "PHP app - no build needed"
+  envs:
+  - key: COMPOSER_INSTALL
+    value: "false"

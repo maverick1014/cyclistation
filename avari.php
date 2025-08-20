@@ -237,19 +237,8 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" class="social-link facebook" target="_blank" aria-label="Follow us on Facebook">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-link instagram" target="_blank" aria-label="Follow us on Instagram">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
-            <p class="footer-text">&copy; <?php echo date('Y'); ?> Cyclistation. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include component_path('floating-social.php'); ?>
+    <?php include component_path('footer.php'); ?>
 
     <script src="<?php echo js_url('landing.js'); ?>"></script>
 </body>
