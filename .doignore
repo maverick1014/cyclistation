@@ -1,0 +1,31 @@
+# Digital Ocean deployment ignore file
+
+# Development files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Local environment files
+.env.local
+.env.development
+.env.test
+
+# Cache directories
+.cache/
+tmp/
+temp/
+
+# Documentation
+README.md
+docs/
+
+# Git
+.git/
+.gitignore
