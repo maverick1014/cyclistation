@@ -897,20 +897,30 @@ img {
 .trust-signals {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
     margin: 2rem 0;
     flex-wrap: wrap;
 }
 
 .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--success-color);
+    background: rgba(72, 187, 120, 0.9);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
     font-weight: 500;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(72, 187, 120, 0.5);
+    transition: all 0.3s ease;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.trust-item:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .trust-item::before {
-    content: "✓";
-    font-weight: bold;
+    display: none;
 }
