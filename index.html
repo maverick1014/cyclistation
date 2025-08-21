@@ -1,4 +1,3 @@
-<?php require_once 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <title><?php echo SITE_NAME; ?> - <?php echo SITE_TAGLINE; ?> | Official Dealer</title>
+    <title>Cyclistation - Premium Elves Carbon Bike Framesets | Official Dealer</title>
     <meta name="description" content="Discover premium Elves carbon bike framesets at Cyclistation. From aero gravel to XC hardtails, find your perfect high-performance frameset with global warranty and expert support.">
     <meta name="keywords" content="elves bikes, carbon framesets, gravel bike, road bike, triathlon bike, mountain bike, cyclistation, premium cycling">
     <meta name="robots" content="index, follow">
@@ -16,7 +15,6 @@
     <meta property="og:title" content="Cyclistation - Premium Elves Carbon Bike Framesets">
     <meta property="og:description" content="Official dealer of premium Elves carbon bike framesets. Discover race-winning performance across all cycling disciplines.">
     <meta property="og:image" content="/assets/images/cyclistation-hero.jpg">
-    <meta property="og:url" content="<?php echo $_SERVER['HTTP_HOST']; ?>">
     <meta property="og:type" content="website">
     
     <!-- Structured Data -->
@@ -26,20 +24,16 @@
         "@type": "WebSite",
         "name": "Cyclistation",
         "description": "Premium Elves carbon bike framesets dealer",
-        "url": "<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>",
         "potentialAction": {
             "@type": "SearchAction",
-            "target": "<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>/search?q={search_term_string}",
+            "target": "/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
         }
     }
     </script>
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href="<?php echo 'https://' . $_SERVER['HTTP_HOST']; ?>">
-    
     <!-- CSS -->
-    <link rel="stylesheet" href="<?php echo css_url('landing.css'); ?>">
+    <link rel="stylesheet" href="assets/css/landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -209,9 +203,9 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="<?php echo HOME_PATH; ?>" class="logo">
+            <a href="index.html" class="logo">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhHZM7HEPSpyEASO2Et02A_c-uQTeNRSicA&s" alt="Cyclistation Logo" class="logo-image">
-                <span class="logo-text"><?php echo SITE_NAME; ?></span>
+                <span class="logo-text">Cyclistation</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -268,7 +262,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo MORI_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="mori.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -293,7 +287,7 @@
                                 <span class="price-current">RM5,460.00</span>
                             </div>
                             
-                            <a href="<?php echo FALATH_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="falath.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -318,7 +312,7 @@
                                 <span class="price-current">RM8,645.00</span>
                             </div>
                             
-                            <a href="<?php echo AMANYAR_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="amanyar.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -344,7 +338,7 @@
                                 <span class="price-original">RM5,915.00</span>
                             </div>
                             
-                            <a href="<?php echo VANYAR_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="vanyar.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -369,7 +363,7 @@
                                 <span class="price-current">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo AVARI_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="avari.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -395,7 +389,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo NANDOR_PATH; ?>" class="product-cta">Explore & Order</a>
+                            <a href="nandor.html" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
                 </div>
@@ -458,11 +452,41 @@
         </section>
     </main>
 
-    <?php include component_path('floating-social.php'); ?>
-    <?php include component_path('footer.php'); ?>
+    <!-- Floating Social Media -->
+    <div class="floating-social">
+        <a href="#" class="social-link facebook" target="_blank" data-tooltip="Follow us on Facebook" aria-label="Follow us on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-link instagram" target="_blank" data-tooltip="Follow us on Instagram" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" class="social-link facebook" target="_blank" aria-label="Follow us on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-link instagram" target="_blank" aria-label="Follow us on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link whatsapp" target="_blank" aria-label="Chat with us on WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+            <p class="footer-text">&copy; 2025 Cyclistation. All rights reserved. | 
+            <a href="/privacy" style="color: white;">Privacy Policy</a> | 
+            <a href="/terms" style="color: white;">Terms of Service</a></p>
+        </div>
+    </footer>
 
     <!-- JavaScript -->
-    <script src="<?php echo js_url('landing.js'); ?>"></script>
+    <script src="assets/js/landing.js"></script>
     
     <!-- Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>

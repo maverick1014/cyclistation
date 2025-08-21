@@ -1,6 +1,11 @@
-# Composer dependencies
+# PHP files (using static HTML instead)
+*.php
+
+# Composer dependencies  
 vendor/
 composer.phar
+composer.json
+composer.lock
 
 # Environment files
 .env
