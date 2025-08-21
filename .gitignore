@@ -1,0 +1,95 @@
+# Composer dependencies
+vendor/
+composer.phar
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.buildpath
+.settings/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+
+# Cache and temporary files
+*.tmp
+*.temp
+/tmp/
+/temp/
+cache/
+/cache/
+
+# PHP specific
+*.cache
+.phpunit.cache/
+
+# Node.js (if you add any frontend build tools later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+/dist/
+/build/
+/_site/
+
+# Local development files
+config/database.local.php
+config/app.local.php
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Archive files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+
+# Security and sensitive files
+.htpasswd
+.ssh/
+*.pem
+*.key
+*.crt
+
+# WordPress (if you ever integrate with WP)
+wp-config.php
+wp-content/uploads/
+
+# Testing
+/tests/coverage/
+.phpunit.result.cache
+
+# Documentation build
+/docs/_build/
+
+# Local server files
+.php_cs.cache
+.phpmd.xml

@@ -268,7 +268,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo MORI_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo MORI_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -293,7 +293,7 @@
                                 <span class="price-current">RM5,460.00</span>
                             </div>
                             
-                            <a href="<?php echo FALATH_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo FALATH_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -318,7 +318,7 @@
                                 <span class="price-current">RM8,645.00</span>
                             </div>
                             
-                            <a href="<?php echo AMANYAR_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo AMANYAR_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -344,7 +344,7 @@
                                 <span class="price-original">RM5,915.00</span>
                             </div>
                             
-                            <a href="<?php echo VANYAR_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo VANYAR_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -369,7 +369,7 @@
                                 <span class="price-current">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo AVARI_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo AVARI_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
 
@@ -395,7 +395,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="<?php echo NANDOR_PATH; ?>" class="product-cta">View Details & Buy</a>
+                            <a href="<?php echo NANDOR_PATH; ?>" class="product-cta">Explore & Order</a>
                         </div>
                     </div>
                 </div>
