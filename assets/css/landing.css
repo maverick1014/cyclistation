@@ -533,6 +533,10 @@ body {
     background: #25d366;
 }
 
+.social-link.tiktok:hover {
+    background: #000000;
+}
+
 /* Floating Social Media Sidebar */
 .floating-social {
     position: fixed;
@@ -581,6 +585,11 @@ body {
 .floating-social .social-link.whatsapp:hover {
     background: #25d366;
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+.floating-social .social-link.tiktok:hover {
+    background: #000000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* Floating social tooltip */
