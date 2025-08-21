@@ -594,7 +594,6 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(26, 32, 44, 0.9);
     color: white;
     display: flex;
     align-items: center;
@@ -608,29 +607,40 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.floating-social .social-link.facebook {
+    background: #1877f2;
+}
+
+.floating-social .social-link.instagram {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.floating-social .social-link.whatsapp {
+    background: #25d366;
+}
+
+.floating-social .social-link.tiktok {
+    background: #ff0050;
+}
+
 .floating-social .social-link:hover {
     transform: translateY(-3px) scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
 .floating-social .social-link.facebook:hover {
-    background: #1877f2;
     box-shadow: 0 8px 25px rgba(24, 119, 242, 0.4);
 }
 
 .floating-social .social-link.instagram:hover {
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
     box-shadow: 0 8px 25px rgba(225, 48, 108, 0.4);
 }
 
 .floating-social .social-link.whatsapp:hover {
-    background: #25d366;
     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
 }
 
 .floating-social .social-link.tiktok:hover {
-    background: #000000;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 0, 80, 0.4);
 }
 
 /* Floating social tooltip */

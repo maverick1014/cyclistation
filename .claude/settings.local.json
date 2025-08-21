@@ -5,7 +5,11 @@
       "Bash(mv:*)",
       "WebFetch(domain:my.elvesbike.com)",
       "Bash(rm:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(cp:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []
