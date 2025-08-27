@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Cyclistation - Your Trusted Elves Framesets Partner | Premium Cycling</title>
+    <meta name="description" content="Learn about Cyclistation, your trusted partner for premium Elves carbon framesets. Authorized dealer with expert support, 5-year warranty, and professional services.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius);
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-content a {
+            color: var(--text-dark) !important;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--bg-secondary);
+            color: var(--secondary-color) !important;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .about-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/about.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 8rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .value-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .value-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .value-description {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .stats-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/><circle cx="10" cy="60" r="0.5" fill="white" opacity="0.1"/><circle cx="90" cy="40" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            pointer-events: none;
+        }
+        
+        .stats-section .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .impact-subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .stat-item:hover::before {
+            left: 100%;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .stat-icon {
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #FFD700;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.95;
+            letter-spacing: 0.5px;
+        }
+        
+        .stat-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            width: 0%;
+            transition: width 2s ease;
+        }
+        
+        .stat-item:hover .stat-progress {
+            width: 100%;
+        }
+        
+        .team-section {
+            background: var(--bg-secondary);
+        }
+        
+        .partnership-section {
+            background: white;
+        }
+        
+        .partner-logo {
+            max-width: 300px;
+            height: auto;
+            margin: 2rem auto;
+            display: block;
+            background: rgba(0,0,0,0.87);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+        
+        .timeline-item {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .timeline-year {
+            background: var(--secondary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius-full);
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .timeline-content h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-content p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Cyclistation Logo" class="logo-image">
+                <span class="logo-text">Cyclistation</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#elves">Elves</a>
+                    <div class="dropdown-content">
+                        <a href="falath">Falath EXP</a>
+                        <a href="avari">Avari Pro</a>
+                        <a href="vanyar">Vanyar</a>
+                        <a href="mori">Mori Aerox</a>
+                        <a href="amanyar">Amanyar 1.0</a>
+                        <a href="nandor">Nandor Pro</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>Your Trusted Cycling Partner</h1>
+            <p>Dedicated to bringing you the finest carbon framesets and exceptional service that elevates your cycling experience.</p>
+            <div class="trust-signals">
+                <div class="trust-item">Authorized Elves Dealer</div>
+                <div class="trust-item">Expert Technical Support</div>
+                <div class="trust-item">5-Year Global Warranty</div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Mission</h2>
+                    <p>Empowering cyclists with premium framesets and expert guidance</p>
+                </div>
+                
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h3>Passion Meets Performance</h3>
+                        <p>At Cyclistation, we believe every cyclist deserves access to world-class equipment and expert guidance. As an authorized Elves dealer, we're committed to bringing you the finest carbon framesets that combine cutting-edge technology with proven performance.</p>
+                        
+                        <p>Our team of cycling enthusiasts understands the importance of finding the perfect frameset for your unique riding style and goals. We don't just sell framesets – we build lasting relationships with fellow cyclists who share our passion for performance and quality.</p>
+                    </div>
+                    
+                    <div class="intro-image">
+                        <div style="width: 100%; height: 300px; background: rgba(0,0,0,0.87); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            <img src="https://ueeshop.ly200-cdn.com/u_file/UPAX/UPAX437/2304/10/photo/Asset12.png" alt="Elves Bicycles Official Logo" style="width: 200px; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Impact</h2>
+                    <p class="impact-subtitle">Building a community of performance-driven cyclists</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-number" data-target="500">0</div>
+                        <div class="stat-label">Happy Customers</div>
+                        <div class="stat-progress"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Elves Models Available</div>
+                        <div class="stat-progress"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Year Global Warranty</div>
+                        <div class="stat-progress"></div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Customer Support</div>
+                        <div class="stat-progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Values</h2>
+                    <p>The principles that guide everything we do</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="value-title">Quality First</h3>
+                        <p class="value-description">
+                            We partner exclusively with premium manufacturers like Elves to ensure every frameset meets the highest standards of craftsmanship and performance.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="value-title">Expert Guidance</h3>
+                        <p class="value-description">
+                            Our team combines deep technical knowledge with real-world cycling experience to provide personalized recommendations for every rider.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="value-title">Professional Service</h3>
+                        <p class="value-description">
+                            From initial consultation to post-purchase support, we provide comprehensive services including assembly, fitting, and ongoing maintenance guidance.
+                        </p>
+                    </div>
+
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 class="value-title">Trust & Transparency</h3>
+                        <p class="value-description">
+                            We build lasting relationships through honest communication, transparent pricing, and reliable warranty support that you can count on.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partnership-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Official Elves Partnership</h2>
+                    <p>Authorized dealer bringing you authentic premium carbon framesets</p>
+                </div>
+                
+                <div class="intro-content">
+                    <div class="intro-text">
+                        <h3>Why Choose an Authorized Dealer?</h3>
+                        <p>As an official Elves dealer, we provide guarantees that independent sellers simply cannot match. Every frameset comes with full manufacturer documentation, authentic serial numbers, and comprehensive warranty coverage.</p>
+                        
+                        <p>Our partnership with Elves means direct access to the latest models, technical specifications, and factory support. We receive ongoing training on new technologies and assembly techniques to ensure every customer receives expert service.</p>
+                    </div>
+                    
+                    <div class="intro-image">
+                        <div style="width: 100%; height: 300px; background: rgba(0,0,0,0.87); border-radius: var(--border-radius); display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+                            <img src="https://ueeshop.ly200-cdn.com/u_file/UPAX/UPAX437/2304/10/photo/Asset12.png" alt="Elves Bicycles Official Logo" style="width: 200px; height: auto;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Journey</h2>
+                    <p>Building expertise through passion and dedication</p>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2020</div>
+                        <div class="timeline-content">
+                            <h4>The Beginning</h4>
+                            <p>Founded by cycling enthusiasts with a vision to bring premium framesets and expert service to the Malaysian cycling community.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-content">
+                            <h4>Elves Partnership</h4>
+                            <p>Became an authorized Elves dealer, gaining access to their complete range of premium carbon framesets and technical support resources.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h4>Service Expansion</h4>
+                            <p>Launched professional assembly services and custom build consultations, helping customers create their perfect dream bikes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h4>Community Growth</h4>
+                            <p>Reached 300+ satisfied customers and established partnerships with local cycling clubs and professional teams.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h4>Digital Innovation</h4>
+                            <p>Launched comprehensive online platform with detailed product information, virtual consultations, and enhanced customer support.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h4>Future Forward</h4>
+                            <p>Continuing to evolve with the latest UCI-approved models and expanding our expertise in cutting-edge cycling technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Ready to Start Your Journey?</h2>
+                    <p>Let our experts help you find the perfect frameset for your cycling goals</p>
+                </div>
+                
+                <div class="trust-signals">
+                    <div class="trust-item">Free Expert Consultation</div>
+                    <div class="trust-item">Professional Assembly Services</div>
+                    <div class="trust-item">5-Year Global Warranty</div>
+                    <div class="trust-item">Ongoing Technical Support</div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="contact.html" class="cta-button">Get Expert Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Social Media -->
+    <div class="floating-social">
+        <a href="https://www.facebook.com/ElvesBikeMalaysia" class="social-link facebook" target="_blank" data-tooltip="Follow us on Facebook" aria-label="Follow us on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/elvesbikemalaysia/" class="social-link instagram" target="_blank" data-tooltip="Follow us on Instagram" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@elvesbikemalaysia" class="social-link tiktok" target="_blank" data-tooltip="Follow us on TikTok" aria-label="Follow us on TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20your%20cycling%20products.%20Can%20you%20provide%20more%20information%3F" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2025 Cyclistation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/landing.js"></script>
+    <script>
+        // 数字动画效果
+        function animateNumbers() {
+            const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+            
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                const duration = 2000; // 2秒动画
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+                
+                const timer = setInterval(() => {
+                    current += step;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    stat.textContent = Math.floor(current) + (target >= 100 ? '+' : '');
+                }, 16);
+            });
+        }
+        
+        // 当元素进入视口时触发动画
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        // 观察统计部分
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+        
+        // 添加鼠标悬停时的粒子效果
+        document.querySelectorAll('.stat-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -13,6 +13,51 @@
     <link rel="stylesheet" href="assets/css/landing.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1), 0 4px 6px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-content a {
+            color: #1a202c !important;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 500;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f7fafc;
+            color: #4299e1 !important;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">
@@ -23,10 +68,19 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#intro">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#specs">Specs</a></li>
-                <li><a href="#purchase">Buy Now</a></li>
+                <li class="dropdown">
+                    <a href="#elves">Elves</a>
+                    <div class="dropdown-content">
+                        <a href="falath">Falath EXP</a>
+                        <a href="avari">Avari Pro</a>
+                        <a href="vanyar">Vanyar</a>
+                        <a href="mori">Mori Aerox</a>
+                        <a href="amanyar">Amanyar 1.0</a>
+                        <a href="nandor">Nandor Pro</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -40,7 +94,7 @@
                 <div class="trust-item">Higher Stack Geometry</div>
                 <div class="trust-item">Fits Riders 145-188cm</div>
             </div>
-            <a href="https://my.elvesbike.com/products/elves-avari-pro-road-disc-framesets-uci?VariantsId=11610" class="cta-button" target="_blank">Buy Now - RM5,005.00</a>
+            <a href="https://my.elvesbike.com/products/elves-avari-pro-road-disc-framesets-uci?VariantsId=11610" class="cta-button" target="_blank">Buy Now - RM5,445.00</a>
         </div>
     </section>
 
@@ -155,7 +209,10 @@
                 <h2>Ready for UCI-Approved Performance?</h2>
                 <p>Perfect fit and professional performance for all riders</p>
                 
-                <div class="price">RM5,005.00</div>
+                <div class="price" data-original="7078.00" data-discount="5445.00">
+                    <span class="price-original">RM7,078.00</span>
+                    RM5,445.00
+                </div>
                 
                 <div class="trust-signals">
                     <div class="trust-item">UCI Approved for Racing</div>
@@ -182,7 +239,7 @@
         <a href="https://www.tiktok.com/@elvesbikemalaysia" class="social-link tiktok" target="_blank" data-tooltip="Follow us on TikTok" aria-label="Follow us on TikTok">
             <i class="fab fa-tiktok"></i>
         </a>
-        <a href="https://wa.me/60128839273" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+        <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20the%20Elves%20Avari%20Pro%20Road%20Disc%20Framesets.%20Can%20you%20provide%20more%20information%20and%20pricing%3F" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>

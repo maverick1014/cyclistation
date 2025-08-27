@@ -44,6 +44,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius);
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-content a {
+            color: var(--text-dark) !important;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--bg-secondary);
+            color: var(--secondary-color) !important;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -212,10 +255,20 @@
                 <span class="logo-text">Cyclistation</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#elves">Elves</a>
+                    <div class="dropdown-content">
+                        <a href="falath">Falath EXP</a>
+                        <a href="avari">Avari Pro</a>
+                        <a href="vanyar">Vanyar</a>
+                        <a href="mori">Mori Aerox</a>
+                        <a href="amanyar">Amanyar 1.0</a>
+                        <a href="nandor">Nandor Pro</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -266,7 +319,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="mori.html" class="product-cta">Explore & Order</a>
+                            <a href="mori.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
 
@@ -291,7 +344,7 @@
                                 <span class="price-current">RM5,460.00</span>
                             </div>
                             
-                            <a href="falath.html" class="product-cta">Explore & Order</a>
+                            <a href="falath.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
 
@@ -316,7 +369,7 @@
                                 <span class="price-current">RM8,645.00</span>
                             </div>
                             
-                            <a href="amanyar.html" class="product-cta">Explore & Order</a>
+                            <a href="amanyar.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
 
@@ -342,7 +395,7 @@
                                 <span class="price-original">RM5,915.00</span>
                             </div>
                             
-                            <a href="vanyar.html" class="product-cta">Explore & Order</a>
+                            <a href="vanyar.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
 
@@ -367,7 +420,7 @@
                                 <span class="price-current">RM5,005.00</span>
                             </div>
                             
-                            <a href="avari.html" class="product-cta">Explore & Order</a>
+                            <a href="avari.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
 
@@ -393,7 +446,7 @@
                                 <span class="price-original">RM5,005.00</span>
                             </div>
                             
-                            <a href="nandor.html" class="product-cta">Explore & Order</a>
+                            <a href="nandor.html" class="product-cta">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -410,7 +463,7 @@
                 
                 <div class="intro-content">
                     <div class="intro-text">
-                        <h3>Official Elves Dealer</h3>
+                        <h3>Official Elves Distributor</h3>
                         <p>As an authorized dealer, we provide genuine Elves products with full manufacturer warranty and expert support. Every frameset comes with comprehensive documentation and professional guidance.</p>
                         
                         <div class="trust-signals">
@@ -445,7 +498,7 @@
                 </div>
                 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://wa.me/60128839273" class="cta-button" target="_blank">Contact Our Experts</a>
+                    <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20your%20cycling%20products.%20Can%20you%20provide%20more%20information%3F" class="cta-button" target="_blank">Contact Our Experts</a>
                 </div>
             </div>
         </section>
@@ -462,7 +515,7 @@
         <a href="https://www.tiktok.com/@elvesbikemalaysia" class="social-link tiktok" target="_blank" data-tooltip="Follow us on TikTok" aria-label="Follow us on TikTok">
             <i class="fab fa-tiktok"></i>
         </a>
-        <a href="https://wa.me/60128839273" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+        <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20your%20cycling%20products.%20Can%20you%20provide%20more%20information%3F" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>

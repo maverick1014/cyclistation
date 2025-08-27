@@ -9,7 +9,10 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(cp:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "WebSearch",
+      "WebFetch(domain:www.instagram.com)",
+      "WebFetch(domain:www.facebook.com)"
     ],
     "deny": [],
     "ask": []

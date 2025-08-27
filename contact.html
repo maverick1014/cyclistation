@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Expert Cycling Consultation | Cyclistation</title>
+    <meta name="description" content="Get expert advice on Elves carbon framesets. Contact Cyclistation for personalized recommendations, technical support, and professional consultation.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: var(--shadow-lg);
+            border-radius: var(--border-radius);
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            padding: 0.5rem 0;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-content a {
+            color: var(--text-dark) !important;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--bg-secondary);
+            color: var(--secondary-color) !important;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown > a::after {
+            content: " ▼";
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        
+        .contact-hero {
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('assets/images/about.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 8rem 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .contact-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .contact-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .contact-button {
+            background: var(--secondary-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-full);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        
+        .contact-button:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .faq-section {
+            background: var(--bg-secondary);
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .faq-question {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.jpg" alt="Cyclistation Logo" class="logo-image">
+                <span class="logo-text">Cyclistation</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#elves">Elves</a>
+                    <div class="dropdown-content">
+                        <a href="falath">Falath EXP</a>
+                        <a href="avari">Avari Pro</a>
+                        <a href="vanyar">Vanyar</a>
+                        <a href="mori">Mori Aerox</a>
+                        <a href="amanyar">Amanyar 1.0</a>
+                        <a href="nandor">Nandor Pro</a>
+                    </div>
+                </li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="hero-content">
+            <h1>Get Expert Consultation</h1>
+            <p>Ready to find your perfect frameset? Our experts are here to guide you through every step of your cycling journey.</p>
+            <div class="trust-signals">
+                <div class="trust-item">Expert Technical Support</div>
+                <div class="trust-item">Custom Build Services</div>
+                <div class="trust-item">Nationwide Shipping</div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact Our Experts</h2>
+                    <p>Choose the best way to reach us for personalized assistance</p>
+                </div>
+                
+                <div style="display: flex; justify-content: center;">
+                    <div class="contact-card" style="max-width: 500px;">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3 class="contact-title">WhatsApp Consultation</h3>
+                        <p class="contact-info">
+                            Get instant answers to your questions. Our cycling experts are available to provide personalized recommendations and technical support.
+                            <br><br>
+                            <strong>Response Time:</strong> Usually within 1 hour during business hours
+                        </p>
+                        <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20your%20cycling%20products.%20Can%20you%20provide%20more%20information%3F" class="contact-button" target="_blank">
+                            Start WhatsApp Chat
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="trust-signals" style="margin-top: 4rem;">
+                    <div class="trust-item">Authorized Elves Dealer</div>
+                    <div class="trust-item">5-Year Global Warranty</div>
+                    <div class="trust-item">Professional Assembly Available</div>
+                    <div class="trust-item">Nationwide Shipping</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions about our framesets and services</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What makes Elves framesets different from other brands?
+                    </div>
+                    <div class="faq-answer">
+                        Elves framesets are handcrafted using premium Japanese Toray T800 and T1000 carbon fiber. Each frame features innovative technologies like ITAC aerodynamics, truncated airfoil design, and custom geometry options. As an authorized dealer, we provide genuine products with full manufacturer warranty and expert support.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I choose the right size and model for me?
+                    </div>
+                    <div class="faq-answer">
+                        Our experts provide personalized consultations to help you choose the perfect frameset based on your riding style, body measurements, and performance goals. We consider factors like stack/reach geometry, intended use, and compatibility with your preferred components.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Do you offer custom paint and build services?
+                    </div>
+                    <div class="faq-answer">
+                        Yes! Many of our framesets offer extensive color customization options, including chameleon paint finishes. We also provide professional assembly services and can help specify the perfect component package for your needs and budget.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What warranty and support do you provide?
+                    </div>
+                    <div class="faq-answer">
+                        All Elves framesets come with a comprehensive 5-year global warranty covering manufacturing defects. As an authorized dealer, we provide ongoing technical support, warranty service, and can assist with any questions or issues throughout the ownership experience.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How long does shipping take and what are the costs?
+                    </div>
+                    <div class="faq-answer">
+                        We offer nationwide shipping with delivery typically within 3-5 business days for in-stock items. Custom paint orders may take 2-4 weeks. Shipping costs vary by location and order value - contact us for specific quotes. We ensure all framesets are carefully packaged for safe delivery.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Social Media -->
+    <div class="floating-social">
+        <a href="https://www.facebook.com/ElvesBikeMalaysia" class="social-link facebook" target="_blank" data-tooltip="Follow us on Facebook" aria-label="Follow us on Facebook">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/elvesbikemalaysia/" class="social-link instagram" target="_blank" data-tooltip="Follow us on Instagram" aria-label="Follow us on Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.tiktok.com/@elvesbikemalaysia" class="social-link tiktok" target="_blank" data-tooltip="Follow us on TikTok" aria-label="Follow us on TikTok">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://wa.me/60128839273?text=Hi%2C%20I%27m%20interested%20in%20your%20cycling%20products.%20Can%20you%20provide%20more%20information%3F" class="social-link whatsapp" target="_blank" data-tooltip="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">&copy; 2025 Cyclistation. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/landing.js"></script>
+</body>
+</html>
