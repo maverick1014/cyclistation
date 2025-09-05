@@ -1,27 +1,51 @@
 /* Landing Page CSS Framework - Modern Design & Conversion Optimized */
 
 :root {
-    /* Modern Color Palette */
-    --primary-color: #1a202c;
-    --secondary-color: #4299e1;
-    --accent-color: #ed8936;
-    --success-color: #48bb78;
-    --warning-color: #ecc94b;
-    --danger-color: #f56565;
+    /* === CYCLISTATION MODERN THEME === */
+    
+    /* Primary Brand Colors */
+    --primary-color: #000000;        /* Pure black - main brand color */
+    --primary-light: #1a1a1a;        /* Subtle black variation */
+    --secondary-color: #0066FF;      /* Vibrant blue - cycling energy */
+    --secondary-light: #3388FF;      /* Lighter blue for hover states */
+    
+    /* Accent Colors */
+    --accent-orange: #FF6B00;        /* Bright orange - CTA buttons */
+    --accent-green: #00C851;         /* Success green - checkmarks, trust signals */
+    --accent-yellow: #FFD700;        /* Premium gold - highlights */
+    --accent-red: #FF3547;           /* Alert/danger red */
+    --whatsapp-green: #25D366;       /* Official WhatsApp green */
     
     /* Text Colors */
-    --text-dark: #1a202c;
-    --text-medium: #4a5568;
-    --text-light: #718096;
-    --text-lighter: #a0aec0;
+    --text-dark: #000000;            /* Pure black text */
+    --text-medium: #333333;          /* Medium gray text */
+    --text-light: #666666;           /* Light gray text */
+    --text-lighter: #999999;         /* Lighter gray for subtle text */
     
     /* Background Colors */
-    --bg-primary: #ffffff;
-    --bg-secondary: #f7fafc;
-    --bg-tertiary: #edf2f7;
-    --bg-dark: #1a202c;
-    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --bg-gradient-light: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --bg-white: #FFFFFF;             /* Pure white backgrounds */
+    --bg-light: #F8F9FA;             /* Very light gray backgrounds */
+    --bg-medium: #F0F0F0;            /* Medium light backgrounds */
+    --bg-dark: #000000;              /* Pure black backgrounds */
+    --bg-dark-light: #1A1A1A;        /* Slightly lighter black */
+    --bg-dark-medium: #2D2D2D;       /* Medium dark backgrounds */
+    
+    /* Theme Colors */
+    --text-white: #FFFFFF;           /* Pure white text on dark backgrounds */
+    --text-white-soft: #F0F0F0;      /* Softer white for long text */
+    
+    /* Brand Gradients */
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    --gradient-secondary: linear-gradient(135deg, #0066FF 0%, #3388FF 100%);
+    --gradient-accent: linear-gradient(135deg, #FF6B35 0%, #FFD700 100%);
+    
+    /* Legacy Color Compatibility */
+    --accent-color: var(--accent-yellow);    /* Maps to new bright yellow */
+    --success-color: var(--accent-green);    /* Maps to new green */
+    --warning-color: var(--accent-yellow);   /* Maps to new gold */
+    --danger-color: var(--accent-red);       /* Maps to new red */
+    --bg-primary: var(--bg-white);           /* Maps to pure white */
+    --bg-secondary: var(--bg-light);         /* Maps to light gray */
     
     /* Shadows & Effects */
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -160,7 +184,7 @@ body {
 }
 
 .cta-button {
-    background: var(--bg-gradient-light);
+    background: var(--accent-orange);
     color: white;
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
@@ -172,7 +196,7 @@ body {
     gap: 0.5rem;
     transition: var(--transition);
     box-shadow: var(--shadow-lg);
-    border: none;
+    border: 2px solid transparent;
     cursor: pointer;
     text-transform: none;
     letter-spacing: 0;
@@ -196,9 +220,9 @@ body {
 }
 
 .cta-button:hover {
+    background: #FF8533;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-xl);
-    filter: brightness(1.1);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.4);
 }
 
 .cta-button:active {
@@ -360,7 +384,7 @@ body {
 }
 
 .gallery-item {
-    background: var(--bg-white);
+    background: transparent;
     border-radius: var(--border-radius);
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -571,7 +595,7 @@ body {
 }
 
 .social-link.whatsapp:hover {
-    background: #25d366;
+    background: var(--whatsapp-green);
 }
 
 .social-link.tiktok:hover {
@@ -616,7 +640,7 @@ body {
 }
 
 .floating-social .social-link.whatsapp {
-    background: #25d366;
+    background: var(--whatsapp-green);
 }
 
 .floating-social .social-link.tiktok {
@@ -903,7 +927,7 @@ img {
 }
 
 .trust-item {
-    background: rgba(72, 187, 120, 0.9);
+    background: rgb(57 122 251 / 70%);
     color: white;
     padding: 0.5rem 1rem;
     border-radius: 20px;
@@ -911,16 +935,350 @@ img {
     font-weight: 500;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(72, 187, 120, 0.5);
+    border: 1px solid rgb(57 122 251 / 40%);
     transition: all 0.3s ease;
     text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-}
-
-.trust-item:hover {
-    background: rgba(72, 187, 120, 1);
-    transform: translateY(-2px);
+    position: relative;
+    overflow: hidden;
 }
 
 .trust-item::before {
-    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    transition: left 0.5s;
+}
+
+.trust-item:hover::before {
+    left: 100%;
+}
+
+.trust-item:hover {
+    background: rgb(37, 109, 255);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgb(57 122 251 / 40%);
+}
+
+/* === DARK THEME SECTIONS === */
+.section.section-dark {
+    background: var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
+    color: var(--text-white) !important;
+}
+
+.section.section-dark h1,
+.section.section-dark h2,
+.section.section-dark h3,
+.section.section-dark h4,
+.section.section-dark h5,
+.section.section-dark h6 {
+    color: var(--text-white) !important;
+}
+
+.section.section-dark p {
+    color: var(--text-white-soft) !important;
+}
+
+.section.section-dark .section-header h2 {
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .section-header p {
+    color: var(--text-white-soft) !important;
+}
+
+/* Dark theme product cards */
+.section.section-dark .product-card {
+    background: var(--bg-dark-medium) !important;
+    border: 1px solid var(--text-light) !important;
+}
+
+.section.section-dark .product-card .product-title {
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .product-card .product-category {
+    color: var(--secondary-color) !important;
+}
+
+.section.section-dark .product-card .product-description {
+    color: var(--text-white-soft) !important;
+}
+
+.section.section-dark .product-card .product-features li {
+    color: var(--text-white-soft) !important;
+}
+
+.section.section-dark .product-card .product-features li:before {
+    color: var(--accent-green) !important;
+}
+
+/* Dark theme spec cards */
+.section.section-dark .spec-card {
+    background: var(--bg-dark-medium) !important;
+    border: 1px solid var(--text-light) !important;
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .spec-card h4 {
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .spec-card p {
+    color: var(--text-white-soft) !important;
+}
+
+/* Dark theme intro content */
+.section.section-dark .intro-text h3 {
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .intro-text p {
+    color: var(--text-white-soft) !important;
+}
+
+/* Dark theme trust signals */
+.section.section-dark .trust-signals .trust-item {
+    background: rgb(57 122 251 / 60%) !important;
+    border-color: rgb(57 122 251 / 50%) !important;
+    color: var(--text-white) !important;
+}
+
+.section.section-dark .trust-signals .trust-item:hover {
+    background: rgb(57 122 251 / 90%) !important;
+    box-shadow: 0 6px 20px rgb(57 122 251 / 40%) !important;
+}
+
+/* Dark theme price section */
+.section.section-dark .price {
+    color: var(--accent-yellow) !important;
+}
+
+/* Dark theme CTA buttons */
+.section.section-dark .cta-button {
+    background: var(--accent-orange) !important;
+    color: var(--text-white) !important;
+    border: 2px solid var(--accent-orange) !important;
+    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3) !important;
+}
+
+.section.section-dark .cta-button:hover {
+    background: transparent !important;
+    color: var(--accent-orange) !important;
+    border: 2px solid var(--accent-orange) !important;
+    box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* === WHATSAPP SPECIFIC STYLING === */
+/* WhatsApp Contact Button */
+.contact-button[href*="wa.me"],
+.contact-button[href*="whatsapp"],
+a[href*="wa.me"].contact-button,
+a[href*="whatsapp"].contact-button {
+    background: var(--whatsapp-green) !important;
+    color: white !important;
+    border: 2px solid var(--whatsapp-green) !important;
+}
+
+.contact-button[href*="wa.me"]:hover,
+.contact-button[href*="whatsapp"]:hover,
+a[href*="wa.me"].contact-button:hover,
+a[href*="whatsapp"].contact-button:hover {
+    background: #128C7E !important;
+    border-color: #128C7E !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* WhatsApp CTA Buttons */
+.cta-button[href*="wa.me"],
+.cta-button[href*="whatsapp"],
+a[href*="wa.me"].cta-button,
+a[href*="whatsapp"].cta-button {
+    background: var(--whatsapp-green) !important;
+    color: white !important;
+    border: 2px solid var(--whatsapp-green) !important;
+}
+
+.cta-button[href*="wa.me"]:hover,
+.cta-button[href*="whatsapp"]:hover,
+a[href*="wa.me"].cta-button:hover,
+a[href*="whatsapp"].cta-button:hover {
+    background: #128C7E !important;
+    border-color: #128C7E !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* WhatsApp Icons */
+.fa-whatsapp {
+    color: var(--whatsapp-green) !important;
+}
+
+/* WhatsApp Contact Icon in Contact Cards */
+.contact-icon .fa-whatsapp {
+    color: var(--whatsapp-green) !important;
+    font-size: 3rem !important;
+}
+
+/* === MODERN TIMELINE DESIGN === */
+.modern-timeline {
+    position: relative;
+    padding: 3rem 0;
+    margin: 2rem 0;
+}
+
+.timeline-road {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--accent-orange));
+    transform: translateX(-50%);
+    border-radius: 2px;
+    z-index: 1;
+}
+
+.journey-milestone {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    z-index: 2;
+}
+
+.journey-milestone:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.journey-milestone:nth-child(even) .milestone-content {
+    text-align: right;
+    padding-right: 3rem;
+    padding-left: 0;
+}
+
+.journey-milestone:nth-child(odd) .milestone-content {
+    text-align: left;
+    padding-left: 3rem;
+    padding-right: 0;
+}
+
+.milestone-marker {
+    position: relative;
+    z-index: 3;
+    flex-shrink: 0;
+}
+
+.milestone-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 102, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.milestone-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(0, 102, 255, 0.4);
+}
+
+.milestone-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.milestone-content {
+    flex: 1;
+    max-width: 400px;
+    background: var(--bg-dark-medium);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border: 1px solid #444;
+    transition: all 0.3s ease;
+}
+
+.milestone-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.milestone-year {
+    display: inline-block;
+    background: var(--accent-orange);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius-full);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.milestone-content h3 {
+    color: var(--text-white);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.milestone-content p {
+    color: var(--text-white-soft);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.journey-milestone.future .milestone-icon {
+    background: var(--accent-yellow);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.3);
+}
+
+.journey-milestone.future .milestone-icon:hover {
+    box-shadow: 0 12px 35px rgba(255, 215, 0, 0.4);
+}
+
+.journey-milestone.future .milestone-year {
+    background: var(--accent-yellow);
+    color: var(--text-dark);
+}
+
+/* Mobile Responsive Timeline */
+@media (max-width: 768px) {
+    .timeline-road {
+        left: 40px;
+    }
+    
+    .journey-milestone,
+    .journey-milestone:nth-child(even) {
+        flex-direction: row;
+        margin-left: 0;
+    }
+    
+    .milestone-content,
+    .journey-milestone:nth-child(even) .milestone-content {
+        text-align: left;
+        padding-left: 2rem;
+        padding-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .milestone-icon {
+        width: 60px;
+        height: 60px;
+        margin-left: 10px;
+    }
+    
+    .milestone-icon i {
+        font-size: 1.5rem;
+    }
 }

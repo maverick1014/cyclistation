@@ -12,7 +12,12 @@
       "Bash(git push:*)",
       "WebSearch",
       "WebFetch(domain:www.instagram.com)",
-      "WebFetch(domain:www.facebook.com)"
+      "WebFetch(domain:www.facebook.com)",
+      "Bash(find:*)",
+      "Bash(for file in avari.html vanyar.html amanyar.html nandor.html turbo-aero.html)",
+      "Bash(do echo \"Updating $file...\")",
+      "Bash(done)",
+      "WebFetch(domain:zavincicycle.com)"
     ],
     "deny": [],
     "ask": []
