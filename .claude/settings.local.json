@@ -19,7 +19,9 @@
       "Bash(done)",
       "WebFetch(domain:zavincicycle.com)",
       "Read(/Users/saralimm/Downloads/Speedave Pinnacle 18-8-2025/**)",
-      "Read(/Users/saralimm/Downloads/Speedave Pinnacle 18-8-2025/**)"
+      "Read(/Users/saralimm/Downloads/Speedave Pinnacle 18-8-2025/**)",
+      "Read(/Users/saralimm/Downloads/**)",
+      "Bash(unzip:*)"
     ],
     "deny": [],
     "ask": []

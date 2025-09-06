@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ahyka Aero Water Bottle - Premium Cycling Hydration Solution</title>
+    <meta name="description" content="Experience superior cycling hydration with Ahyka Aero Water Bottle. 600ml capacity, ultra-light 91g weight, premium PP5 material. Perfect aerodynamic design for serious cyclists.">
+    <meta name="keywords" content="ahyka water bottle, aero water bottle, cycling hydration, carbon bottle cage, 600ml bottle">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    
+    <link rel="stylesheet" href="assets/css/landing.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Water Bottle Specific Styling */
+        .bottle-hero {
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bottle-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+        }
+        
+        .bottle-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .bottle-info {
+            color: white;
+        }
+        
+        .bottle-brand {
+            display: inline-block;
+            background: var(--accent-orange);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+        
+        .bottle-title {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #cccccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .bottle-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-orange);
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        
+        .bottle-description {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 3rem;
+        }
+        
+        .bottle-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .highlight-item {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .highlight-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 107, 0, 0.1);
+            border-color: var(--accent-orange);
+        }
+        
+        .highlight-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .highlight-label {
+            font-size: 1rem;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .highlight-unit {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
+            font-weight: 400;
+        }
+        
+        .bottle-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .bottle-main-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            filter: drop-shadow(0 20px 60px rgba(255, 107, 0, 0.3));
+            transition: all 0.3s ease;
+        }
+        
+        .bottle-main-image:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 25px 80px rgba(255, 107, 0, 0.4));
+        }
+        
+        .floating-feature {
+            position: absolute;
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .floating-feature.top-left {
+            top: 15%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-feature.top-right {
+            top: 25%;
+            right: 15%;
+            animation-delay: 1s;
+        }
+        
+        .floating-feature.bottom-left {
+            bottom: 20%;
+            left: 5%;
+            animation-delay: 2s;
+        }
+        
+        .feature-value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            line-height: 1;
+        }
+        
+        .feature-label {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-top: 0.2rem;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        /* Specifications Section */
+        .specs-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 8rem 0;
+        }
+        
+        .specs-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .specs-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .specs-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+        
+        .spec-card {
+            background: white;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spec-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent-orange), #ff8533);
+        }
+        
+        .spec-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+        }
+        
+        .spec-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-orange), #ff8533);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        
+        .spec-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .spec-value {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .spec-value strong {
+            color: var(--accent-orange);
+            font-weight: 600;
+        }
+        
+        /* Gallery Section */
+        .gallery-section {
+            background: var(--bg-dark);
+            padding: 8rem 0;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .gallery-title {
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .gallery-subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .overlay-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .overlay-desc {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .bottle-hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .bottle-title {
+                font-size: 2.5rem;
+            }
+            
+            .bottle-highlights {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .specs-title, .gallery-title {
+                font-size: 2rem;
+            }
+            
+            .floating-feature {
+                position: static;
+                margin: 1rem 0;
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="bottle-hero">
+        <div class="bottle-container">
+            <div class="bottle-hero-content">
+                <div class="bottle-info">
+                    <div class="bottle-brand">Ahyka</div>
+                    <h1 class="bottle-title">Aero Water<br>Bottle</h1>
+                    <div class="bottle-subtitle">Premium Cycling Hydration Solution</div>
+                    <p class="bottle-description">
+                        Engineered for performance, designed for aerodynamics. The Ahyka Aero Water Bottle combines ultra-light construction with premium materials to deliver the ultimate cycling hydration experience.
+                    </p>
+                    
+                    <div class="bottle-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-number">600<span class="highlight-unit">ml</span></div>
+                            <div class="highlight-label">Capacity</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">91<span class="highlight-unit">g</span></div>
+                            <div class="highlight-label">Ultra-Light</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-number">38<span class="highlight-unit">g</span></div>
+                            <div class="highlight-label">Carbon Cage</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottle-visual">
+                    <img src="assets/images/water-bottle/IMG_5644.jpg" alt="Ahyka Aero Water Bottle" class="bottle-main-image">
+                    
+                    <div class="floating-feature top-left">
+                        <div class="feature-value">PP5</div>
+                        <div class="feature-label">Premium Material</div>
+                    </div>
+                    
+                    <div class="floating-feature top-right">
+                        <div class="feature-value">70°C</div>
+                        <div class="feature-label">Max Temperature</div>
+                    </div>
+                    
+                    <div class="floating-feature bottom-left">
+                        <div class="feature-value">Press-Type</div>
+                        <div class="feature-label">Easy Nozzle</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications Section -->
+    <section class="specs-section">
+        <div class="bottle-container">
+            <div class="specs-header">
+                <h2 class="specs-title">Technical Specifications</h2>
+                <p class="specs-subtitle">Precision engineered for performance cycling with attention to every detail</p>
+            </div>
+            
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">🍾</div>
+                    <div class="spec-name">Bottle Specifications</div>
+                    <div class="spec-value">
+                        <strong>Capacity:</strong> 600ml<br>
+                        <strong>Weight:</strong> Only 91g<br>
+                        <strong>Max Temperature:</strong> Below 70°C
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🏗️</div>
+                    <div class="spec-name">Material & Construction</div>
+                    <div class="spec-value">
+                        <strong>Body:</strong> PP5 Premium Plastic<br>
+                        <strong>Nozzle:</strong> Food-grade Silicone<br>
+                        <strong>Cage:</strong> Carbon Fiber (38g)
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">📏</div>
+                    <div class="spec-name">Dimensions</div>
+                    <div class="spec-value">
+                        <strong>Length:</strong> 240mm<br>
+                        <strong>Width:</strong> 66mm<br>
+                        <strong>Depth:</strong> 109mm
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">⚙️</div>
+                    <div class="spec-name">Nozzle System</div>
+                    <div class="spec-value">
+                        <strong>Type:</strong> Press-type<br>
+                        <strong>Design:</strong> Non-removable<br>
+                        <strong>Operation:</strong> Non-pullable
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🔧</div>
+                    <div class="spec-name">Compatibility</div>
+                    <div class="spec-value">
+                        <strong>Fit:</strong> Standard round bottles<br>
+                        <strong>Installation:</strong> Flat head screws required<br>
+                        <strong>Note:</strong> High screws may scratch
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🏆</div>
+                    <div class="spec-name">Premium Features</div>
+                    <div class="spec-value">
+                        <strong>Design:</strong> Aerodynamic profile<br>
+                        <strong>Quality:</strong> Food-grade materials<br>
+                        <strong>Performance:</strong> Racing optimized
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="bottle-container">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Product Gallery</h2>
+                <p class="gallery-subtitle">Explore every detail of the Ahyka Aero Water Bottle</p>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5645.jpg" alt="Bottle Side View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Aerodynamic Profile</div>
+                        <div class="overlay-desc">Sleek design optimized for minimal wind resistance</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5646.jpg" alt="Nozzle Detail" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Press-Type Nozzle</div>
+                        <div class="overlay-desc">Food-grade silicone for easy hydration</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5648.jpg" alt="Carbon Cage" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Carbon Bottle Cage</div>
+                        <div class="overlay-desc">Ultra-light 38g carbon fiber construction</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5649.jpg" alt="Installation View" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Easy Installation</div>
+                        <div class="overlay-desc">Standard compatibility with flat head screws</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5651.jpg" alt="Material Detail" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Premium Materials</div>
+                        <div class="overlay-desc">PP5 body with food-grade silicone components</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="assets/images/water-bottle/IMG_5653.jpg" alt="Complete System" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="overlay-title">Complete System</div>
+                        <div class="overlay-desc">Bottle and carbon cage ready for racing</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple gallery interaction
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            galleryItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const img = this.querySelector('img');
+                    // Could add modal functionality here if needed
+                    console.log('Clicked image:', img.alt);
+                });
+            });
+            
+            // Smooth scrolling for internal links (if any added later)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
