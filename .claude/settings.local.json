@@ -17,7 +17,9 @@
       "Bash(for file in avari.html vanyar.html amanyar.html nandor.html turbo-aero.html)",
       "Bash(do echo \"Updating $file...\")",
       "Bash(done)",
-      "WebFetch(domain:zavincicycle.com)"
+      "WebFetch(domain:zavincicycle.com)",
+      "Read(/Users/saralimm/Downloads/Speedave Pinnacle 18-8-2025/**)",
+      "Read(/Users/saralimm/Downloads/Speedave Pinnacle 18-8-2025/**)"
     ],
     "deny": [],
     "ask": []
